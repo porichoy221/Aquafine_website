@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display font-semibold tracking-tight; }
+  .admin h1, .admin h2, .admin h3 { @apply font-sans font-bold; }
+  :focus-visible { outline: 2px solid #0E47A1; outline-offset: 2px; box-shadow: 0 0 0 5px #fff; }
+}
+@layer components {
+  .inp { @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-base text-ink outline-none focus:border-ocean; }
+  .btn { @apply inline-flex items-center justify-center rounded-full bg-ocean px-5 py-2.5 font-semibold text-white hover:bg-[#0b3a85] disabled:opacity-50; }
+  .btn-leaf { @apply inline-flex items-center justify-center rounded-full bg-leaf px-5 py-3 font-semibold text-ink hover:brightness-95; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
